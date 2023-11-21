@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+      
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="search-container">
+        
+            <!-- <h1>Weather App</h1> -->
+        <input type="text" id="input-box" placeholder="Enter the city">
+        <button onclick="getWeather()" id="search-button"><img src="images/search.png" alt=""></button>
+
+        </div>
+
+        <div class="main-body">
+            <img id="weather-image" src="images\clear.png" alt="">
+            <h1 id="degree"> <span id="temperature"></span></h1>
+            <h2 id="place">Bengaluru</h2>
+        </div>
+
+        <div class="footer">
+            <div class="humidity">
+                <img src="images/humidity.png" alt="">
+                <h4><span class="percentage">53%</span> <br><span class="weather-condition">Humidity</span></h4>
+            </div>
+            <div class="wind-speed">
+                <img src="images/wind.png" alt="">
+                <h4><span class="percentage">5.66 km/h </span><br><span class="weather-condition">Wind Speed</span></h4>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
