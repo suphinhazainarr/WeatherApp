@@ -19,4 +19,3 @@ function getWeather() {
         document.getElementById('temperature').textContent = 'City not found';
       });
   }
-  
