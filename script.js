@@ -13,6 +13,8 @@ function getWeather() {
       .then(data => {
         const temperature = data.main.temp;
         document.getElementById('temperature').textContent = `${temperature}°C`;
+        const cityName = data.name;
+        document.getElementById('place').innerHTML = `${cityName}`;
       })
       .catch(error => {
         console.error('Error:', error);

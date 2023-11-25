@@ -15,8 +15,7 @@ async function checkWeather(city) {
     document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
     document.querySelector(".wind").innerHTML = data.wind.speed + " km/hr";
 
-    // Your code to set weather icons based on conditions
-if (data.weather[0].main === "Clouds") {
+if (data.weather[0].main === "Clouds") { 
     weatherIcon.src = "images/clouds.png";
 } else if (data.weather[0].main === "Clear") {
     weatherIcon.src = "images/clear.png";
@@ -28,10 +27,13 @@ if (data.weather[0].main === "Clouds") {
     weatherIcon.src = "images/mist.png";
 }
 
-
-
-
 }
+
 searchBtn.addEventListener("click", ()=>{
     checkWeather(searchBox.value);
+})
+searchBox.addEventListener("keypress", (event) => {
+    if(event.key ==='Enter'){
+        checkWeather(searchBox.value);
+    }
 })
